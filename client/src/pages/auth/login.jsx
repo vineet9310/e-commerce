@@ -1,7 +1,7 @@
 function AuthLogin() {
   return (
-    <div>AuthLogin</div>
-  )
+    <div>Login</div>
+  );
 }
 
 export default AuthLogin
