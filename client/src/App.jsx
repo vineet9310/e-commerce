@@ -24,7 +24,6 @@ const user = null;
 
   return (
     <div className="flex flex-col overflow-hidden bg-white">
-      <h1>Header component</h1>
       <Routes>
         <Route path="/auth" element={
           <CheckAuth isAuthenticated={isAuthenticated} user={user}>
