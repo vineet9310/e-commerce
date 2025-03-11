@@ -1,6 +1,23 @@
 import { Link } from "react-router-dom"
+import { useState } from "react"
+import CommonForm from "@/components/common/form"
+import { registerFormControls } from "@/config"
+
+const initilaState = {
+  userName: '',
+  email: '',
+  password: ''
+}
 
 function AuthRegister() {
+
+  const [formData, setFormData] = useState(initilaState)
+
+
+  function onSubmit(){
+
+  }
+
     return (
       <div className="mx-auto w-full max-w-md space-y-6">
         <div className="text-center">
@@ -9,6 +26,13 @@ function AuthRegister() {
             <Link className="font-medium ml-2 text-primary hover:underline" to='/auth/login'>Login</Link>
           </p>
         </div>
+        <CommonForm
+        formControls={registerFormControls}
+        buttonText={'Sign up'}
+        formData={formData}
+        setFormData={setFormData}
+        onSubmit={onSubmit}
+        />
       </div>
     ) 
   }
