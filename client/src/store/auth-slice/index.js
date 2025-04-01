@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
@@ -133,3 +134,30 @@ const authSlice = createSlice({
 
 export const { setUser } = authSlice.actions;
 export default authSlice.reducer;
+=======
+import { createSlice } from '@reduxjs/toolkit';
+
+
+
+const initialState = {
+    isAuthenticated: false,
+    isloading: false,
+    user: null,
+}
+
+
+
+const authSlice = createSlice({
+  name: 'auth',
+  initialState,
+    reducers: {
+        setUser: (state, action) => {
+            state.isAuthenticated = true;
+            state.user = action.payload;
+        }
+    },
+})
+
+export const { setUser } = authSlice.actions;
+export default authSlice.reducer;
+>>>>>>> 03106f9cd9bb87793ab6e587301daa7ab9750bea
